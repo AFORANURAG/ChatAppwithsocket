@@ -12,7 +12,7 @@ import { Input,Box} from '@chakra-ui/react'
 import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
 
  
-const socket=io.connect("http://localhost:8080")
+const socket=io.connect("http://localhost:8000")
 function App() {
   const [name,setName]=useState("")
 

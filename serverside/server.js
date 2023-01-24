@@ -9,13 +9,13 @@ const server=http.createServer(app)
 
 const io=new Server(server,{
     cors:{
-        origin:"http://localhost:5173"
+        origin:"https://chat-appwithsocket.vercel.app/"
     }
 })
 
-
 io.on("connection",(socket)=>{
 console.log(socket.id)
+
 socket.on("join_room",(data)=>{
 socket.join(data)
 console.log(`user with id ${socket.id} join room : ${data}`)
@@ -34,6 +34,6 @@ socket.to(data.room).emit("receive_message",data)
 })
 
 
-server.listen(8080,()=>{
-    console.log("Server Running on port 8080")
+server.listen(8000,()=>{
+    console.log("Server Running on port 8000")
 })
