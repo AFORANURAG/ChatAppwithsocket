@@ -5,14 +5,11 @@ import { Button, ButtonGroup, Heading } from '@chakra-ui/react'
 // 1. import `ChakraProvider` component
 import { ChakraProvider } from '@chakra-ui/react'
 import Chatbox from './components/Chatbox'
-
 import { Container } from '@chakra-ui/react'
 import { Input,Box} from '@chakra-ui/react'
-
 import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
 
- 
-const socket=io.connect("http://localhost:8000")
+const socket=io.connect("https://kuchbhi-7yap.onrender.com/")
 function App() {
   const [name,setName]=useState("")
 
